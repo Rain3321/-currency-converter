@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF66CDAA"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:id="@+id/time_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/upper_layout"
+        android:onClick="onLayoutOnClick">
+
+        <TextView
+            android:id="@+id/symbol_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:text="USD"
+            android:clickable="false"
+            android:textColor="#000000"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nanumbarunpen"/>
+
+        <EditText
+            android:id="@+id/edit_money_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:textColor="#000000"
+            android:singleLine="true"
+            android:gravity="right"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lower_layout"
+        android:onClick="onLayoutOnClick">
+
+        <TextView
+            android:id="@+id/symbol_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:clickable="false"
+            android:text="KRW"
+            android:textColor="#000000"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nanumbarunpen"/>
+
+        <EditText
+            android:id="@+id/edit_money_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:textColor="#000000"
+            android:gravity="right"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:digits="0123456789"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/exchange_history" />
+
+</LinearLayout>
